@@ -1,0 +1,86 @@
+  <form (ngSubmit)="submitForm(form)" class="form-inline" #form="ngForm">
+
+    <div class="inputs">
+      <div class="date fromDate">
+        <div class="caption">Дата заезда</div>
+        <div class="form-group">
+          <input
+
+                 type="date"
+                 class="form-control"
+                 ngModel
+                 name="fromDate"
+                 #fromDate="ngModel"
+                 [class.invalid]="checkForInvalid(fromDate)"
+                 [class.valid]="checkForValid(fromDate)"
+                 required>
+        </div>
+      </div>
+
+      <div class="date toDate">
+        <div class="caption">Дата выезда</div>
+        <div class="form-group">
+          <input
+                 type="date"
+                 class="form-control"
+                 ngModel
+                 name="toDate"
+                 required
+                 #toDate="ngModel"
+                 [class.invalid]="checkForInvalid(toDate)"
+                 [class.valid]="checkForValid(toDate)">
+        </div>
+      </div>
+
+      <div class=" person-count">
+        <div class="caption"> Кол-во человек</div>
+        <div class="form-group">
+          <input
+                 type="number"
+                 class="form-control"
+                 ngModel
+                 name="guestQuantity"
+                 pattern="[1-9]"
+                 required
+                 #guestQuantity="ngModel"
+                 [class.invalid]="checkForInvalid(guestQuantity)"
+                 [class.valid]="checkForValid(guestQuantity)">
+        </div>
+      </div>
+
+      <div class="price min-price">
+        <div class="caption">Цена от...</div>
+        <div class="form-group">
+          <input
+                 type="text"
+                 class="form-control"
+                 ngModel
+                 name="minPrice"
+                 pattern="^[0-9]+$"
+                 required
+                 #minPrice="ngModel"
+                 [class.invalid]="checkForInvalid(minPrice)"
+                 [class.valid]="checkForValid(minPrice)">
+        </div>
+      </div>
+      <div class="price max-price">
+        <div class="caption">Цена до...</div>
+        <div class="form-group">
+          <input
+                 type="text"
+                 class="form-control"
+                 ngModel
+                 name="maxPrice"
+                 pattern="^[0-9]+$"
+                 #maxPrice="ngModel"
+                 [class.invalid]="checkForInvalid(maxPrice)"
+                 [class.valid]="checkForValid(maxPrice)"
+                 required>
+        </div>
+      </div>
+
+    </div>
+    <div class="button">
+      <button type="submit"  class="btn btn-success search">Search</button>
+    </div>
+  </form>

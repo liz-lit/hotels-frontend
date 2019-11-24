@@ -1,0 +1,50 @@
+.results {
+  margin: 15px auto;
+  max-width: 800px;
+  border-radius: 6px;
+  background: #424242;
+  color: white;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  padding: 10px;
+}
+
+.offer-card {
+  background: #4d4c4c;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  div {
+    display: flex;
+    justify-content: space-between;
+    div {
+      display: flex;
+      align-items: center;
+      &:last-child {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &:hover {
+    border: 1px solid rgb(0, 121, 20);
+  }
+  .caption {
+    font-size: 12px;
+    padding-right: 10px;
+  }
+
+  button.btn {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 5px;
+  }
+}
+.cost {
+  line-height: 10px;
+}

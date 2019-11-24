@@ -1,0 +1,70 @@
+
+form {
+  margin: auto;
+  padding: 20px 30px;
+  border-radius: 6px;
+  background: #424242;
+  color: white;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);
+}
+.toDate {
+  margin-left: 10px;
+}
+
+.price input {
+  width: 80px;
+}
+
+.max-price {
+  margin-left: 10px;
+}
+
+.person-count input {
+  width: 60px;
+  margin: 0 15px;
+}
+
+
+.invalid {
+  border: 1px solid red;
+}
+
+.valid {
+  border: 2px solid green;
+}
+
+.caption {
+  border: 0px dotted rgb(139, 116, 116);
+  font-size: 12px;
+  padding-left: 10px;
+  color: rgb(124, 21, 21);
+  height: 20px;
+  color: white;
+}
+
+.person-count .caption {
+  padding-left: 5px;
+  font-size: 10px;
+  
+}
+
+.date .caption {
+  padding-left: 15px;
+}
+
+form.form-inline {
+  flex-direction: column;
+}
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+button {
+  margin-top: 20px;
+  padding-right: 70px;
+  padding-left: 70px;
+}
+

@@ -1,0 +1,2 @@
+<app-search-form (onQuery)=doSearch($event)></app-search-form>
+<app-results [offers]="offers" *ngIf="isOffersLoaded"></app-results>
