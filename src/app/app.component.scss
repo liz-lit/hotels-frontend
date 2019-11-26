@@ -1,4 +1,32 @@
-app-search-form {
+header {
+  height: 50px;
+  background: #28a745;
   display: flex;
-  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  a {
+    color: white;
+    font-weight: 600;
+    margin-left: 10px;
+    &:hover {
+      text-decoration: none;
+    }
+
+    svg {
+      margin-right: 5px;
+    }
+  }
+}
+
+app-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 1;
+}
+
+footer {
+  height: 90px;
+  background: #28a745;
 }

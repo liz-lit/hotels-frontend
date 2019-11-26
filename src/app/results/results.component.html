@@ -1,21 +1,63 @@
-<div class="results">
-  <div *ngFor="let offer of offers" class="offer-card">
-    <div class="hotel-name-block">
-      <div class="caption">Название</div>
-      <div class="hotel-name">{{ offer.hotelName }}</div>
-    </div>
-    <div class="city-block">
-      <div class="caption">Город</div>
-      <div class="city">{{ offer.city }}</div>
-    </div>
-    <div class="type-block">
-      <div class="caption">Кол-во звезд</div>
-      <div class="rating">{{ offer.type }}</div>
-    </div>
-    <div class="total-cost-block">
-      <div class="caption cost">Стоимость <br>за весь период</div>
-      <div class="total-cost">{{ offer.totalCost }}</div>
-    </div>
-    <button class="btn btn-success details">Cмотреть детали</button>
+<div *ngIf="offers$ === undefined; else main" class="results warning">
+  <div>
+    Fill the form and click the Search
   </div>
 </div>
+
+<ng-template #main>
+  <div *ngIf="offers$ | async as offers; else loader" class="results" [class.warning]="offers.length === 0">
+    <div *ngIf="offers.length === 0">No Matches was found</div>
+
+    <div *ngFor="let offer of offers"
+         class="offer-card"
+         (click)="clickHandler(offer.hotelName, searchParams)">
+
+      <div class="hotel-name-block">
+        <div class="caption">Название</div>
+        <div class="hotel-name">{{ offer.hotelName }}</div>
+      </div>
+      <div class="city-block">
+        <div class="caption">Город</div>
+        <div class="city">{{ offer.city }}</div>
+      </div>
+      <div class="type-block">
+        <div class="caption">Кол-во звезд</div>
+        <div class="rating">{{ offer.type }}</div>
+      </div>
+      <div class="total-cost-block">
+        <div class="caption cost">Стоимость <br />за весь период</div>
+        <div class="total-cost">{{ offer.totalCost }}</div>
+      </div>
+      <button class="btn btn-success details">Cмотреть детали</button>
+    </div>
+  </div>
+</ng-template>
+
+
+
+<!-- <ng-template #loaderOrError>
+
+  <div *ngIf="loadingError$ | async; else loader">
+    An Error has occured
+    
+  </div>
+
+  <ng-template #loader>
+    <div class="loader">
+      <p>
+        LOADING....... <br />
+        Please, wait
+      </p>
+    </div>
+  </ng-template>
+
+</ng-template> -->
+
+<ng-template #loader>
+  <div class="loader">
+    <p>
+      LOADING....... <br />
+      Please, wait
+    </p>
+  </div>
+</ng-template>

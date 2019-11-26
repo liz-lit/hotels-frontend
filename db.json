@@ -1,0 +1,72 @@
+{
+  "results": [
+    {
+      "hotel_name": "Hilton",
+      "type": 5,
+      "city": "Moscow",
+      "address": "Lenins str 55",
+      "total_cost": 539900
+    },
+    {
+      "hotel_name": "Meridian",
+      "type": 4,
+      "city": "Madrid",
+      "address": "Lenins str 55",
+      "total_cost": 53420
+    },
+    {
+      "hotel_name": "Radisson",
+      "type": 3,
+      "city": "New York",
+      "address": "Lenins str 55",
+      "total_cost": 53420
+    },
+    {
+      "hotel_name": "Лазурный берег",
+      "type": 5,
+      "city": "Moscow",
+      "address": "Lenins str 55",
+      "total_cost": 53420
+    },
+    {
+      "hotel_name": "Hotel1",
+      "type": 5,
+      "city": "Moscow",
+      "address": "Lenins str 55",
+      "total_cost": 53420
+    },
+    {
+      "hotel_name": "Hotel9",
+      "type": 5,
+      "city": "Moscow",
+      "address": "Lenins str 55",
+      "total_cost": 53420
+    }
+  ],
+  "rooms": [
+    {
+      "type_name": "single",
+      "rooms_quantity": 2,
+      "price": 3200,
+      "total_cost": 9600
+    },
+    {
+      "type_name": "double",
+      "rooms_quantity": 3,
+      "price": 4200,
+      "total_cost": 12600
+    },
+    {
+      "type_name": "deluxe",
+      "rooms_quantity": 1,
+      "price": 13200,
+      "total_cost": 39600
+    },
+    {
+      "type_name": "super",
+      "rooms_quantity": 2,
+      "price": 9200,
+      "total_cost": 19500
+    }
+  ]
+}

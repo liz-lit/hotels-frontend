@@ -1,2 +1,17 @@
-<app-search-form (onQuery)=doSearch($event)></app-search-form>
+<header><a [routerLink]="['/']">
+
+  <svg width="35" height="15" viewBox="0 0 35 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M4.74758 0.341553L1.24758 4.34155L0.671387 5.00006L1.24758 5.65856L4.74758 9.65856L6.25273 8.34155L4.20392 6.00006L49.0002 6.00006V4.00006L4.20392 4.00006L6.25273 1.65856L4.74758 0.341553Z"
+          fill="#fff" />
+  </svg>
+
+    To Main page</a></header>
+
+<app-main></app-main>
+
+<footer></footer>
+
+<!-- <app-search-form (onQuery)="doSearch($event)"></app-search-form>
 <app-results [offers]="offers" *ngIf="isOffersLoaded"></app-results>
+<router-outlet></router-outlet> -->

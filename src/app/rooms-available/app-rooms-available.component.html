@@ -1,0 +1,49 @@
+<div *ngIf="roomsAvailable$ === undefined; else main" class="fill-form-warning">
+    <div>
+        Please, fill the form, go search, and choose your hotel
+    </div>
+</div>
+
+<ng-template #main>
+    <div *ngIf="roomsAvailable$ | async as roomsAvailable; else loader" class="rooms-available-block">
+
+        <div *ngFor="let room of roomsAvailable" class="room-block">
+            <div class="data">
+                <div class="room-type dataraw">
+                    <div class="caption">Тип номера</div>
+                    <div class="value">{{room.typeName}}</div>
+                </div>
+
+                <div class="quantityOfRooms dataraw">
+                    <div class="caption">Количество доступных номеров</div>
+                    <div class="value">{{room.roomsQuantity}}</div>
+                </div>
+
+                <div class="price-per-day dataraw">
+                    <div class="caption">Цена за сутки</div>
+                    <div class="value">{{room.pricePerDay}}</div>
+                </div>
+
+                <div class="total-cost dataraw">
+                    <div class="caption">Итоговая стоиость за период</div>
+                    <div class="value">{{room.totalCost}}</div>
+                </div>
+            </div>
+
+            <button class="btn btn-warning">Забронировать</button>
+        </div>
+
+
+    </div>
+</ng-template>
+
+
+
+<ng-template #loader>
+    <div class="loader">
+        <p>
+            LOADING....... <br />
+            Please, wait
+        </p>
+    </div>
+</ng-template>

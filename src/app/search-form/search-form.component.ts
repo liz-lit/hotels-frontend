@@ -1,6 +1,7 @@
+import { HotelsService } from './../hotels.service';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { HotelsService } from '../hotels.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,14 +10,21 @@ import { HotelsService } from '../hotels.service';
   styleUrls: ['./search-form.component.scss']
 })
 export class SearchFormComponent {
-  
+
   @Output() onQuery: EventEmitter<string> = new EventEmitter();
 
-  submitForm(form: NgForm) {
-    
-    const { fromDate, toDate, personCount, minPrice, maxPrice } = form.value;
+  constructor(
+    private hotelsService: HotelsService,
+    private router: Router
+  ) { }
 
-    this.onQuery.emit(form.value)
+  submitForm(form: NgForm) {
+    console.log('form: ', form);
+
+    const { fromDate, toDate, guestQuantity, minPrice, maxPrice } = form.value;
+
+    this.hotelsService.getOffers(fromDate, toDate, guestQuantity, minPrice, maxPrice)
+    this.router.navigate(['/results'])
   }
 
   checkForInvalid(form: NgForm) {

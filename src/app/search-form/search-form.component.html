@@ -41,7 +41,7 @@
                  ngModel
                  name="guestQuantity"
                  pattern="[1-9]"
-                 required
+                 required                 
                  #guestQuantity="ngModel"
                  [class.invalid]="checkForInvalid(guestQuantity)"
                  [class.valid]="checkForValid(guestQuantity)">
@@ -75,7 +75,8 @@
                  #maxPrice="ngModel"
                  [class.invalid]="checkForInvalid(maxPrice)"
                  [class.valid]="checkForValid(maxPrice)"
-                 required>
+                 required
+                 >
         </div>
       </div>
 
